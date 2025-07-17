@@ -16,7 +16,7 @@
 .main-container{
     display:grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: repeat(4,1fr);
     gap: 10px;
     height:80vh;
     width:75vw;
@@ -40,4 +40,10 @@
     border:none;
     border-radius:10px;
     margin-top:1rem;
+
+}
+
+.counter-container button:hover{
+    background-color:darkgrey;
+    cursor:pointer;
 }
