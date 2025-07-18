@@ -12,8 +12,8 @@ function addCounter(){
                         <img onclick=remove(this) src="https://img.icons8.com/?size=100&id=11705&format=png&color=FFFFFF" class="icon"/>
                     </div>
                     <h3>Counter 1</h3>
-                    <h1>34</h1>
-                    <button>Click</button>
+                    <h1 class="count">0</h1>
+                    <button onClick=incrementCount(this)>Click</button>
                 </div>`
 
     main.appendChild(counterContainer)
@@ -24,4 +24,11 @@ function remove(img){
     const grandparentDiv = parentDiv.parentElement;
     grandparentDiv.remove();
 
+}
+
+function incrementCount(button){
+    const counter = button.closest('.counter-container').querySelector('.count')
+    let currentCount = parseInt(counter.innerText)
+    currentCount++
+    counter.innerText=currentCount
 }
